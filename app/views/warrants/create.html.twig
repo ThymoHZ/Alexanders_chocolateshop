@@ -1,0 +1,32 @@
+{% extends "warrants/base.twig" %}
+
+{% block content %}
+    <form method="POST" action="/warrants">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <strong>Request Draft Warrant</strong>
+            </div>
+            <div class="card-body">
+
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold"><label for="name">Name Of Accused</label></div>
+                    <div class="col-sm-9">
+                        <input type="text" id="name" name="name" class="form-control" value="">
+                        {% if errors.title %}<div class="invalid-feedback d-block">{{ errors.title }}</div>{% endif %}
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold"><label for="description">Description of Alleged Violation</label></div>
+                    <div class="col-sm-9 text-break">
+                        <textarea id="description" name="description" class="form-control">{{ task.description }}</textarea>
+                        {% if errors.description %}<div class="invalid-feedback d-block">{{ errors.description }}</div>{% endif %}
+                    </div>
+                </div>
+
+            <div class="card-footer d-flex gap-2">
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+{% endblock %}

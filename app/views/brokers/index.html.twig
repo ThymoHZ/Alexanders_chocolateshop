@@ -1,0 +1,23 @@
+{% extends "brokers/base.twig" %}
+
+{% block content %}
+    <div class="text-end mb-3">
+        <a href="/brokers/create" class="btn btn-primary">Add New Broker</a>
+    </div>
+    <table class="table table-striped align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th style="width: 90%">Name</th>
+                <th style="width: 10%">View</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for broker in brokers %}
+            <tr>
+                <td>{{ broker.name }}</td>
+                <td><a href="/brokers/{{ broker.id }}" class="btn btn-info">View</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "brokers/base.twig" %}
+
+{% block content %}
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <strong>Broker Details</strong>
+        </div>
+
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-sm-3 fw-bold">Name</div>
+                <div class="col-sm-9">{{ broker.name }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-3 fw-bold">Assigned Agents</div>
+                <div class="col-sm-9">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer d-flex gap-2">
+            <a href="/brokers/{{ broker.id }}/edit" class="btn btn-primary">Edit Broker</a>
+        </div>
+    </div>
+
+{% endblock %}

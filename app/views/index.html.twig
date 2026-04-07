@@ -1,0 +1,55 @@
+{% extends "partials/base.html.twig" %}
+
+{% set pageTitle = "Home" %}
+
+{% block content %}
+    <h1>Welcome to The Custodire</h1>
+    <p>Your safety is our primary concern. Do you believe that you have been wronged, feel that someone else has been wronged, perceive someone's actions to have been harmful in any tangible or non-tangible way? Then you may request a draft warrant, and we will investigate your claim.</p>
+    <p><a href="/warrants/create" class="btn btn-primary">Request Draft Warrant</a></p>
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <strong>Status</strong>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th colspan="3">Totals</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Warrants</th>
+                        <th scope="col">Brokers</th>
+                        <th scope="col">Agents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>999</td>
+                        <td>123</td>
+                        <td>456</td>
+                    </tr>
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th colspan="3">Progress</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Started</th>
+                        <th scope="col">In Progress</th>
+                        <th scope="col">Completed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>999</td>
+                        <td>999</td>
+                        <td>999</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p>Wish to learn more? Start with our <a href="/history">history</a>.</p>
+{% endblock %}
